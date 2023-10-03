@@ -1,7 +1,7 @@
 # Hadoop Final Assigment
 Topic: **Find the most frequent words in a collection of business news in khmertimeskh.com**
-## Install Spark on top of Hadoop
-## Web Scraped Data
+## 1. Install Spark on top of Hadoop
+## 2. Web Scraped Data
 ### Preparation
 #### Website
 We are choosing khmertimeskh website to scraped data https://www.khmertimeskh.com.
@@ -90,4 +90,4 @@ def writeFile (title, content):
     
     print(f"File '{filename}' created successfully.")
 ```
-## Spark & Hadoop
+## 3. Spark & Hadoop
