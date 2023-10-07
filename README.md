@@ -1,6 +1,43 @@
 # Hadoop Final Assigment
 Topic: **Find the most frequent words in a collection of business news in khmertimeskh.com**
 ## 1. Install Spark on top of Hadoop
+### Download
+- Visit the Apache Spark website (https://spark.apache.org/downloads.html).
+```
+wget -O [https://www.apache.org/dyn/closer.lua/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz](https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz)
+```
+### Extract
+
+```
+tar -zxvf spark-3.5.0-bin-hadoop3.tgz
+```
+### Move to /usr/local
+```
+mv spark-3.5.0-bin-hadoop3 spark
+cp -r spark /usr/local
+```
+### Add Path
+bin and sbin
+SARK_HOME
+PATH
+
+```
+echo "export SPARK_HOME=/usr/local/spark" >> ~/.bashrc
+echo "export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop" >> ~/.bashrc
+echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.bashrc
+
+source ~/.bashrc
+# to verfiy
+echo $SPARK_HOME
+echo $PATH
+```
+
+To verify
+```
+spark-shell
+```
+
+
 ## 2. Web Scraped Data
 ### Preparation
 #### Website
