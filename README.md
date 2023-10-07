@@ -56,6 +56,9 @@ Type :help for more information.
 
 ```
 
+Visit http://139.59.104.211:4040/jobs/
+
+
 ## 2. Web Scraped Data
 ### Preparation
 #### Website
