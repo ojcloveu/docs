@@ -4,7 +4,7 @@ Topic: **Find the most frequent words in a collection of business news in khmert
 ### Download
 - Visit the Apache Spark website (https://spark.apache.org/downloads.html).
 ```
-wget -O [https://www.apache.org/dyn/closer.lua/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz](https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz)
+wget  [https://www.apache.org/dyn/closer.lua/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz](https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz)
 ```
 ### Extract
 
@@ -14,7 +14,7 @@ tar -zxvf spark-3.5.0-bin-hadoop3.tgz
 ### Move to /usr/local
 ```
 mv spark-3.5.0-bin-hadoop3 spark
-cp -r spark /usr/local
+sudo cp -r spark /usr/local
 ```
 ### Add Path
 bin and sbin
@@ -24,6 +24,7 @@ PATH
 ```
 echo "export SPARK_HOME=/usr/local/spark" >> ~/.bashrc
 echo "export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop" >> ~/.bashrc
+source ~/.bashrc
 echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.bashrc
 
 source ~/.bashrc
@@ -37,6 +38,23 @@ To verify
 spark-shell
 ```
 
+```
+
+Spark context Web UI available at http://10.15.0.8:4040
+Spark context available as 'sc' (master = local[*], app id = local-1696682400617).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.5.0
+      /_/
+         
+Using Scala version 2.12.18 (OpenJDK 64-Bit Server VM, Java 1.8.0_382)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+```
 
 ## 2. Web Scraped Data
 ### Preparation
